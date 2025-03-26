@@ -17,7 +17,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-const app = require("./app");
+
 const connectDatabase = require("./db/Database");
 const cloudinary = require("cloudinary");
 
