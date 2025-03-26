@@ -1,3 +1,22 @@
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Default Route
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
+// Other routes
+app.get("/api/products", (req, res) => {
+  res.json([{ id: 1, name: "Product A" }, { id: 2, name: "Product B" }]);
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 const app = require("./app");
 const connectDatabase = require("./db/Database");
 const cloudinary = require("cloudinary");
